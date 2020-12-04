@@ -7,8 +7,14 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git branch: "{$env.BRANCH_NAME}",
-                        url: 'https://github.com/jenkinsci/jenkins.git'
+
+                        
+                scm: [
+$class: 'GitSCM', branches: [
+[name: "${BRANCH_NAME}"]], doGenerateSubmoduleConfigurations: false, gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/jenkinsci/jenkins.git"]
+]
+]
+                        
             }
         }
        
