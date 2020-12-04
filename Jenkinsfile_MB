@@ -7,8 +7,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git url: 'https://github.com/thiefik/jenkins-workshop1.git'
-            }
+                git url: 'https://github.com/thiefik/jenkins-workshop1.git', branch: '$BRANCH_NAME'                                    }
         }
        
         stage("MVN"){
