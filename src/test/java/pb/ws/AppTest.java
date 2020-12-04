@@ -27,11 +27,4 @@ public class AppTest
         assertFalse( false );
     }
 
-    @Test
-    @Ignore
-    public void shouldAnswerFail()
-    {
-        // TODO: fix this later ;)
-//        assertFalse( true );
-    }
 }
