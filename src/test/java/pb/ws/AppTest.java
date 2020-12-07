@@ -26,9 +26,4 @@ public class AppTest
         assertFalse( false );
     }
 
-    @Test
-    public void shouldAnswerFail()
-    {
-        assertFalse( true );
-    }
 }
